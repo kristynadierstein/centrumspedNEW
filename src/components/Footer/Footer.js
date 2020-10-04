@@ -1,11 +1,11 @@
 import React from "react"
-// import {
-//   FooterContainer,
-//   SocialMediaFooterContainer,
-//   LegalLinksContainer,
-//   FooterContentContainer,
-//   LegalContainerDesktop,
-// } from "./Footer.css"
+import {
+  FooterContainer,
+  SocialMediaFooterContainer,
+  LegalLinksContainer,
+  FooterContentContainer,
+  LegalContainerDesktop,
+} from "./Footer.css"
 // import { useStaticQuery, graphql } from "gatsby"
 import LocaleContext from "./../../context/LocaleProvider"
 // import SocialMedia from "components/SocialMedia/SocialMedia"

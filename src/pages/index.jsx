@@ -1,10 +1,10 @@
-import React from "react";
+import React  from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { graphql } from "gatsby";
 import { Listing, Wrapper, Title } from "../components";
 import website from "../../config/website";
-import { LocaleContext } from "../components/Layout";
+import LocaleContext  from "./../context/LocaleProvider";
 // import SEO from "../components/SEO";
 
 const Hero = styled.header`
@@ -43,14 +43,14 @@ const Index = ({
   const lang = React.useContext(LocaleContext);
   const i18n = lang.i18n[lang.locale];
 
-  console.log("i18n", i18n)
+  console.log("lang", i18n)
   console.log(lang)
 
   return (
     <>
       {/* <SEO pathname={location.pathname} locale={locale} /> */}
       <Hero>
-        <HeroInner></HeroInner>
+        <HeroInner>Hello</HeroInner>
       </Hero>
       <IndexWrapper
         id={website.skipNavId}
