@@ -41,6 +41,7 @@ const reset = css`
   summary,
   textarea {
     touch-action: manipulation;
+    text-decoration: none;
   }
   table {
     border-collapse: collapse;

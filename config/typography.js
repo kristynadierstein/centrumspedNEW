@@ -4,6 +4,20 @@ import theme from '../src/styles/theme';
 // The scaleRatio will be overwritten for smaller breakpoints in src/components/Layout
 
 const typography = new Typography({
+  googleFonts: [
+    {
+      name: theme.fontFamily.primary,
+      styles: ['400', '500', '600', '700']
+    },
+    {
+      name: theme.fontFamily.secondary,
+      styles: ['400', '500', '600', '700']
+    },
+    {
+      name: theme.fontFamily.tertiary,
+      styles: ['400', '500', '600', '700']
+    }
+  ],
   headerFontFamily: [
     "Helvetica",
     "Messina Sans",
