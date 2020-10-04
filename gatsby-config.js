@@ -1,6 +1,7 @@
 require("dotenv").config({
   path: `.env`,
 });
+const path = require(`path`)
 
 const prismicHtmlSerializer = require("./src/gatsby/htmlSerializer");
 const prismicLinkResolver = require("./src/gatsby/linkResolver");
@@ -35,6 +36,13 @@ module.exports = {
         linkResolver: () => prismicLinkResolver,
         // PrismJS highlighting for labels and slices
         htmlSerializer: () => prismicHtmlSerializer,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     "gatsby-plugin-lodash",

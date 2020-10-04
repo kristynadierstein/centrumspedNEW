@@ -3,9 +3,11 @@ import { theme as localTheme } from "../../styles";
 
 export const topHeaderUseStyles = makeStyles((theme) => ({
   container: {
+    width: "100%",
     display: "flex",
-    alignItems: "center",
-    width: "70%",
+    flexWrap: "wrap",
+    boxSizing: "border-box",
+    justifyContent: "flex-end",
   },
   item: {
     color: "black",

@@ -46,12 +46,6 @@ export const TopHeaderContainerDesktop = styled.div`
   width: 100%;
   max-width: ${theme.maxWidthDesktop};
 
-  .Navigation_SearchIcon {
-    margin-right: 20px;
-    cursor: pointer;
-    color: ${theme.colors.primaryblue};
-  }
-
   .Navigation__Button {
     margin-right: 60px;
     min-width: auto;
@@ -119,13 +113,6 @@ export const LocaleSwitcherStyled = styled.div`
   .current {
     opacity: 1;
   }
-`
-
-export const NavigationDesktopSearch = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 40%;
 `
 
 export const LanguageSwitcherContainer = styled.div`
@@ -198,7 +185,7 @@ export const TopContainerFlyout = styled.div`
   justify-content: space-between;
   position: fixed;
   min-height: 130px;
-  background-color: ${theme.colors.bg};
+  background-color: ${theme.colors.primaryblue};
   top: 0px;
   z-index: 10000;
   max-width: 400px;

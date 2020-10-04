@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { LocaleContext } from './Layout'
+import LocaleContext from '../context/LocaleProvider'
 import locales from '../../config/i18n'
 
 const LocalizedLink = ({ to, ...props }) => {
