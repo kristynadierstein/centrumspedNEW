@@ -3,7 +3,12 @@ import { theme } from "../../styles"
 
 
 export const CardsContainer = styled.div`
-
+@media (min-width: ${theme.breakpoints.md}) {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 50px;
+  justify-content: center;
+}
 
 
 .Cards__BGImage {

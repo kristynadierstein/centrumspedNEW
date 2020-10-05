@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   item: {
     color: "black",
     padding: "10px",
+    margin: "0 auto",
   },
   link: {
     fontFamily: localTheme.fontFamily.primary,
@@ -41,9 +42,9 @@ const useStyles = makeStyles((theme) => ({
     border: "1px solid white",
     letterSpacing: "3px",
   },
-  root: {
-    maxWidth: 345,
-  },
+  // root: {
+  //   maxWidth: 345,
+  // },
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -71,9 +72,9 @@ const CardsSection = ({ data }) => {
 
   return (
     <CardsContainer>
-      <Grid container className={classes.container}>
-        <Grid item xs={6} className={classes.item}>
-          <Card className={classes.root}>
+      <Grid container justify="center" className={classes.container}>
+        <Grid item xs={12} md={6} justify="center" className={classes.item}>
+          <Card justify="center" className={classes.root}>
             <BackgroundImage
               fluid={data?.card_1_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
@@ -100,7 +101,7 @@ const CardsSection = ({ data }) => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} className={classes.item}>
+        <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
             <BackgroundImage
               fluid={data?.card_2_image?.localFile?.childImageSharp?.fluid}
@@ -128,7 +129,7 @@ const CardsSection = ({ data }) => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} className={classes.item}>
+        <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
             <BackgroundImage
               fluid={data?.card_3_image?.localFile?.childImageSharp?.fluid}
@@ -156,7 +157,7 @@ const CardsSection = ({ data }) => {
           </Card>
         </Grid>
 
-        <Grid item xs={6} className={classes.item}>
+        <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
             <BackgroundImage
               fluid={data?.card_4_image?.localFile?.childImageSharp?.fluid}
