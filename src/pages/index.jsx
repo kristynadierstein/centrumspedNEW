@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { graphql } from "gatsby";
-import { Listing, Wrapper } from "../components";
+import {  Wrapper } from "../components";
 import website from "../../config/website";
 import LocaleContext from "./../context/LocaleProvider";
 import { getQuery } from "./../functions/getQuery";
