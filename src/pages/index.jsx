@@ -21,6 +21,13 @@ import CardsSection from "./../components/PagesSections/CardsSection"
 
 const IndexWrapper = Wrapper.withComponent("main");
 
+const StyledBackground = styled(BackgroundImage)`
+  &::before,
+  &::after {
+    filter: contrast(80%)
+  }
+`
+
 const Index = ({ pageContext: { locale }, location, data }) => {
   const lang = React.useContext(LocaleContext);
   const i18 = lang.i18n[lang.locale];
@@ -36,7 +43,7 @@ const Index = ({ pageContext: { locale }, location, data }) => {
     <>
       {/* <SEO pathname={location.pathname} locale={locale} /> */}
       <HeroSection>
-        <BackgroundImage
+        <StyledBackground
           fluid={query?.hero_image?.localFile?.childImageSharp?.fluid}
           className="Hero__Image"
         >
@@ -55,7 +62,7 @@ const Index = ({ pageContext: { locale }, location, data }) => {
               {query?.hero_subtitle.text}
             </Title>
           </HeroSubtitleContainer>
-        </BackgroundImage>
+        </StyledBackground>
       </HeroSection>
       <IndexWrapper
         id={website.skipNavId}

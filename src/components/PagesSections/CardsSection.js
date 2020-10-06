@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { CardsContainer } from "./CardsSection.css";
+import styled from "@emotion/styled";
 import { makeStyles } from "@material-ui/core/styles";
 import { theme as localTheme } from "./../../styles";
 import { Grid } from "@material-ui/core";
@@ -61,6 +62,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const StyledBackground = styled(BackgroundImage)`
+  &::before,
+  &::after {
+    filter: contrast(50%)
+  }
+`
+
 const CardsSection = ({ data }) => {
   console.log(data);
   const classes = useStyles();
@@ -75,12 +83,12 @@ const CardsSection = ({ data }) => {
       <Grid container justify="center" className={classes.container}>
         <Grid item xs={12} md={6} justify="center" className={classes.item}>
           <Card justify="center" className={classes.root}>
-            <BackgroundImage
+            <StyledBackground
               fluid={data?.card_1_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
             >
               <Title> {data.card_1_title.text}</Title>
-            </BackgroundImage>
+            </StyledBackground>
             <CardActions disableSpacing>
               <IconButton
                 className={clsx(classes.expand, {
@@ -103,12 +111,12 @@ const CardsSection = ({ data }) => {
 
         <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
-            <BackgroundImage
+            <StyledBackground
               fluid={data?.card_2_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
             >
               <Title> {data.card_2_title.text}</Title>
-            </BackgroundImage>
+            </StyledBackground>
             <CardActions disableSpacing>
               <IconButton
                 className={clsx(classes.expand, {
@@ -131,12 +139,12 @@ const CardsSection = ({ data }) => {
 
         <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
-            <BackgroundImage
+            <StyledBackground
               fluid={data?.card_3_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
             >
               <Title> {data.card_3_title.text}</Title>
-            </BackgroundImage>
+            </StyledBackground>
             <CardActions disableSpacing>
               <IconButton
                 className={clsx(classes.expand, {
@@ -159,12 +167,12 @@ const CardsSection = ({ data }) => {
 
         <Grid item xs={12} md={6} className={classes.item}>
           <Card className={classes.root}>
-            <BackgroundImage
+            <StyledBackground
               fluid={data?.card_4_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
             >
               <Title> {data.card_4_title.text}</Title>
-            </BackgroundImage>
+            </StyledBackground>
             <CardActions disableSpacing>
               <IconButton
                 className={clsx(classes.expand, {
