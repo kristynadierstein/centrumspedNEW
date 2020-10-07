@@ -63,10 +63,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const StyledBackground = styled(BackgroundImage)`
-  &::before,
-  &::after {
-    filter: contrast(50%)
-  }
+
 `
 
 const CardsSection = ({ data }) => {
@@ -87,7 +84,7 @@ const CardsSection = ({ data }) => {
               fluid={data?.card_1_image?.localFile?.childImageSharp?.fluid}
               className="Cards__BGImage"
             >
-              <Title> {data.card_1_title.text}</Title>
+              <Title as="h3"> {data.card_1_title.text}</Title>
             </StyledBackground>
             <CardActions disableSpacing>
               <IconButton

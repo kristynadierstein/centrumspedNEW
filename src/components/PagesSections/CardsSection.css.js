@@ -13,6 +13,8 @@ export const CardsContainer = styled.div`
 
 .Cards__BGImage {
 min-height: 150px;
+background: rgba(255, 255, 255);
+opacity: .5!important;
 
 @media (min-width: ${theme.breakpoints.md}) {
   min-height: 300px;
